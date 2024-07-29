@@ -1,0 +1,178 @@
+.Auth {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+}
+
+.Auth__content div {
+  padding: 3.75em 50px;
+}
+
+.Auth__opacityLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.662);
+}
+
+.Auth__bgLayer {
+  background-image: url("https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_auth_bg.jpg");
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+}
+
+.Auth__content {
+  background-color: #030303bf;
+  border-radius: 8px;
+  left: 50%;
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 2;
+}
+
+.Auth__content--title {
+  color: white;
+}
+
+.SignIn__form--button.button__submit {
+  background-color: #e50914;
+  color: #f2f2f2;
+}
+
+.SignIn__form--button.button__submit:hover {
+  background-color: #be0711;
+}
+
+.SignIn__form--button.button__google {
+  background-color: #1356c7;
+  border: 1px solid #141414;
+  color: #f2f2f2;
+}
+
+.SignIn__form--button.button__anonymous {
+  background-color: #0000;
+  border: 1px solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.SignIn__form--button.button__anonymous:hover {
+  border: 1px solid #e50914;
+  color: #e50914;
+  transform: scale(0.95);
+}
+.SignIn__form--button.button__google:hover {
+  background-color: #141414;
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
+}
+
+.Auth__content--disclaimer {
+  color: #e50914;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.Auth__content--disclaimer,
+.Auth__content--errors {
+  display: inherit;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.SignIn__form--button {
+  align-items: center;
+  border: 1px solid #0000;
+  border-radius: 5px;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 0.5em;
+  min-height: 45px;
+  padding: 18px 12px;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.InputField {
+  background-color: #333;
+  border: 0;
+  border-bottom: 2px solid #0000;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #f2f2f2;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  outline: none;
+  padding: 1em 1.2em;
+  transition: all 0.2s ease-out;
+  width: 93%;
+}
+
+.email {
+  margin-bottom: 1em;
+}
+
+.password {
+  margin-bottom: 1.5em;
+}
+.InputField.Input--error {
+  border-bottom: 2px solid orange;
+}
+
+.Auth__content--divider {
+  border-color: #777;
+  margin: 1.5em;
+}
+
+.Auth__content--toggleView {
+  color: #747474;
+  display: inherit;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.Auth__content--toggleView .toggler {
+  color: #e50914;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: all 0.2s ease-out;
+}
+@media (min-width: 768px) {
+  .Auth__content {
+    max-width: 500px;
+  }
+}
+@media (min-width: 400px) {
+  .Auth__content--title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 400px) {
+  .SignIn__form--button {
+      font-size: 15px;
+      min-height: 60px;
+  }
+}
