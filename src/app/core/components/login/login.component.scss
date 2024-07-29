@@ -64,7 +64,7 @@
   background-color: #0000;
   border: 1px solid #d9d9d9;
   color: #d9d9d9;
-}
+  }
 
 .SignIn__form--button.button__anonymous:hover {
   border: 1px solid #e50914;
@@ -92,24 +92,6 @@
   text-align: center;
 }
 
-.SignIn__form--button {
-  align-items: center;
-  border: 1px solid #0000;
-  border-radius: 5px;
-  box-shadow: none;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  justify-content: center;
-  line-height: 1;
-  margin-top: 0.5em;
-  min-height: 45px;
-  padding: 18px 12px;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
 
 .InputField {
   background-color: #333;

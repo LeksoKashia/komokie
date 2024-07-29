@@ -1,20 +1,57 @@
-<h1>Register</h1>
 
 @if (errorMessage) {
   <div>{{ errorMessage }}</div>
 }
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div>
-    <input type="text" placeholder="Username" formControlName="username" />
+<div class="Auth">
+  <div class="Auth__opacityLayer"></div>
+  <div class="Auth__bgLayer"></div>
+
+  <div class="Auth__content" style="opacity: 1; top: 50%">
+    <div>
+      <h2 class="Auth__content--title" style="opacity: 1; transform: none">
+        Sign Up
+      </h2>
+      <small
+        class="Auth__content--disclaimer"
+        >Pay attention: this is not the original Netflix sign up. Don't insert
+        your real credentials here!</small
+      >
+      <form class="SignIn__form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          class="InputField username"
+          formControlName="username"
+        />
+        <input
+          type="text"
+          name="email"
+          placeholder="E-mail"
+          class="InputField email"
+          formControlName="email"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="InputField password"
+          formControlName="password"
+        />
+        <button
+          type="submit"
+          class="SignIn__form--button button__submit false"
+        >
+          Sign Up
+        </button>
+      </form>
+      <hr class="Auth__content--divider" />
+      <small
+        class="Auth__content--toggleView"
+        style="opacity: 1; transform: none"
+        >Already have an account? <a class="toggler" routerLink="/login">Sign In</a></small
+      >
+    </div>
   </div>
-  <div>
-    <input type="text" placeholder="Email" formControlName="email" />
-  </div>
-  <div>
-    <input type="password" placeholder="Password" formControlName="password" />
-  </div>
-  <div>
-    <button type="submit">Sign Up</button>
-  </div>
-</form>
+</div>

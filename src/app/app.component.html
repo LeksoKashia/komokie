@@ -1,11 +1,1 @@
-@if(authService.currentUserSignal() == null){
-  <app-login></app-login>
-}@else {
-  <div>
-    <span (click)="logout()">Logout</span>
-  </div>
-}
-
-
-
 <router-outlet></router-outlet>
