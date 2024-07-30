@@ -142,11 +142,19 @@
     max-width: 500px;
   }
 }
+
+@media (max-width: 400px) {
+  .InputField{
+    width: 85%;
+  }
+}
+
 @media (min-width: 400px) {
   .content--title {
     font-size: 1.5rem;
   }
 }
+
 @media (min-width: 400px) {
   .auth-button {
     font-size: 15px;
