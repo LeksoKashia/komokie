@@ -5,11 +5,11 @@
   opacity: 1;
 }
 
-.Auth__content div {
+.content div {
   padding: 3.75em 50px;
 }
 
-.Auth__opacityLayer {
+.layer {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   background-color: rgba(0, 0, 0, 0.662);
 }
 
-.Auth__bgLayer {
+.backgroundLayer {
   background-image: url("https://cdn.jsdelivr.net/gh/Th3Wall/assets-cdn/Fakeflix/Fakeflix_auth_bg.jpg");
   height: 100%;
   left: 0;
@@ -29,7 +29,7 @@
   width: 100%;
 }
 
-.Auth__content {
+.content {
   background-color: #030303bf;
   border-radius: 8px;
   left: 50%;
@@ -41,49 +41,40 @@
   z-index: 2;
 }
 
-.Auth__content--title {
+.content--title {
   color: white;
 }
 
-.SignIn__form--button.button__submit {
-  background-color: #e50914;
-  color: #f2f2f2;
-}
-
-.SignIn__form--button.button__submit:hover {
-  background-color: #be0711;
-}
-
-.SignIn__form--button.button__google {
+.auth-button.button__google {
   background-color: #1356c7;
   border: 1px solid #141414;
   color: #f2f2f2;
 }
 
-.SignIn__form--button.button__anonymous {
+.auth-button.button__anonymous {
   background-color: #0000;
   border: 1px solid #d9d9d9;
   color: #d9d9d9;
-  }
+}
 
-.SignIn__form--button.button__anonymous:hover {
+.auth-button.button__anonymous:hover {
   border: 1px solid #e50914;
   color: #e50914;
   transform: scale(0.95);
 }
-.SignIn__form--button.button__google:hover {
+.auth-button.button__google:hover {
   background-color: #141414;
   border: 1px solid #f2f2f2;
   color: #f2f2f2;
 }
 
-.Auth__content--disclaimer {
+.content--disclaimer {
   color: #e50914;
   font-weight: 600;
   margin-bottom: 1em;
 }
-.Auth__content--disclaimer,
-.Auth__content--errors {
+.content--disclaimer,
+.content--errors {
   display: inherit;
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -91,7 +82,6 @@
   margin-top: 1.5em;
   text-align: center;
 }
-
 
 .InputField {
   background-color: #333;
@@ -119,12 +109,12 @@
   border-bottom: 2px solid orange;
 }
 
-.Auth__content--divider {
+.content--divider {
   border-color: #777;
   margin: 1.5em;
 }
 
-.Auth__content--toggleView {
+.content--toggleView {
   color: #747474;
   display: inherit;
   font-family: Inter, sans-serif;
@@ -133,7 +123,7 @@
   text-align: center;
 }
 
-.Auth__content--toggleView .toggler {
+.content--toggleView .toggler {
   color: #e50914;
   cursor: pointer;
   display: inline-block;
@@ -142,19 +132,24 @@
   line-height: 1.4;
   transition: all 0.2s ease-out;
 }
+
+.error {
+  color: rgb(229, 101, 101);
+  font-weight: bold;
+}
 @media (min-width: 768px) {
-  .Auth__content {
+  .content {
     max-width: 500px;
   }
 }
 @media (min-width: 400px) {
-  .Auth__content--title {
+  .content--title {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 400px) {
-  .SignIn__form--button {
-      font-size: 15px;
-      min-height: 60px;
+  .auth-button {
+    font-size: 15px;
+    min-height: 60px;
   }
 }

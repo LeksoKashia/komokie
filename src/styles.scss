@@ -1,41 +1,38 @@
-*{
-    font-family: Inter, sans-serif;
-    color: white;
+* {
+  font-family: Inter, sans-serif;
+  color: white;
 }
 
-body{
-    margin: 0;
-    background: linear-gradient(97deg, #0c1d30 1.27%, #120c1f 75.23%);
-
+body {
+  margin: 0;
+  background: linear-gradient(97deg, #0c1d30 1.27%, #120c1f 75.23%);
 }
 
+.auth-button,
+.main-button {
+  align-items: center;
+  border: 1px solid #0000;
+  border-radius: 5px;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1;
+  margin-top: 0.5em;
+  min-height: 45px;
+  padding: 18px 12px;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
 
-.SignIn__form--button {
-    align-items: center;
-    border: 1px solid #0000;
-    border-radius: 5px;
-    box-shadow: none;
-    cursor: pointer;
-    display: flex;
-    font-family: Inter, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    justify-content: center;
-    line-height: 1;
-    margin-top: 0.5em;
-    min-height: 45px;
-    padding: 18px 12px;
-    transition: all 0.2s ease-out;
-    width: 100%;
-  }
+.auth-button.button__submit {
+  background-color: #e50914;
+  color: #f2f2f2;
+}
 
-
-  .SignIn__form--button.button__submit {
-    background-color: #e50914;
-    color: #f2f2f2;
-  }
-  
-  .SignIn__form--button.button__submit:hover {
-    background-color: #be0711;
-  }
-  
+.auth-button.button__submit:hover {
+  background-color: #be0711;
+}

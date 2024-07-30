@@ -1,23 +1,37 @@
 import { Routes } from '@angular/router';
-import { RegisterComponent } from './core/components/register/register.component';
-import { LoginComponent } from './core/components/login/login.component';
-import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-    {
-      path: 'register',
-      component: RegisterComponent,
-    },
-    {
-      path: 'login',
-      component: LoginComponent,
-    },
-    {
-      path: '',
-      component: HomeComponent,
-    },
-    {
-      path: '**',
-      redirectTo: 'login', // Redirect to home if no other route matches
-    }
-  ];
+  {
+    path: '',
+    loadComponent: () =>
+      import('./pages/home/home.component').then(
+        (m) => m.HomeComponent
+      ),
+  },
+  {
+    path: 'register',
+    loadComponent: () =>
+      import('./core/components/register/register.component').then(
+        (m) => m.RegisterComponent
+      ),
+  },
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./core/components/login/login.component').then(
+        (m) => m.LoginComponent
+      ),
+  },
+
+  {
+    path: `movie/:id`,
+    loadComponent: () =>
+      import('./pages/movie-details/movie-details.component').then(
+        (m) => m.MovieDetailsComponent
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
+  },
+];

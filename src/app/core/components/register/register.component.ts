@@ -29,7 +29,7 @@ export class RegisterComponent {
     const rawForm = this.form.getRawValue();
     this.authService.register(rawForm.email, rawForm.username, rawForm.password).subscribe(
       ()=>{
-      this.router.navigateByUrl('/')
+      this.router.navigateByUrl('login')
       },
       (err) =>{
         this.errorMessage = err.code
