@@ -1,7 +1,3 @@
-@if (errorMessage) {
-<div>{{ errorMessage }}</div>
-}
-
 <div class="Auth">
   <div class="layer"></div>
   <div class="backgroundLayer"></div>
@@ -37,6 +33,10 @@
           class="InputField password"
           formControlName="password"
         />
+        @if (errorMessage) {
+        <span class="error">{{ errorMessage }}</span>
+        }
+
         <button type="submit" class="auth-button button__submit false">
           Sign Up
         </button>
