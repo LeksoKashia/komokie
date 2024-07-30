@@ -26,5 +26,6 @@ This is a Movie App built with Angular that allows users to browse through a lis
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
-   cd movie-app
+   git clone https://github.com/LeksoKashia/komokie
+   npm i
+   ng s
