@@ -2,9 +2,10 @@ import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
 import {provideAuth, getAuth} from '@angular/fire/auth';
+import { MovieInterceptor } from './core/interceptors/movie.interceptor';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCXvnStzdXwglvWzaTezbT92fQWH7pSBOA",
@@ -16,5 +17,5 @@ const firebaseConfig = {
 };
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(), provideFirebaseApp(()=>initializeApp(firebaseConfig)), provideAuth(()=>getAuth())]
+  providers: [provideRouter(routes), provideHttpClient(withInterceptors([MovieInterceptor])), provideFirebaseApp(()=>initializeApp(firebaseConfig)), provideAuth(()=>getAuth())]
 };
