@@ -1,0 +1,135 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.main-child {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8%;
+  left: 15%;
+}
+
+.arrow {
+  padding: 17px 20px;
+  border: 0;
+  background-color: rgba(249, 249, 249, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  height: min-content;
+}
+
+.kaito {
+  width: 70%;
+  position: absolute;
+  top: 19%;
+  left: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-back {
+  margin: 0;
+}
+
+.arrow:hover {
+  background-color: rgba(249, 249, 249, 0.353);
+}
+
+.back-img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5);
+}
+.watchlist {
+  font-weight: 800;
+  font-size: 16px;
+  padding: 15px 18px;
+  color: white;
+}
+
+.watch {
+  background-color: rgba(248, 179, 25, 1);
+  color: black;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 13px 17px;
+  border: 2px solid rgba(248, 177, 25, 0);
+}
+.watch:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgba(248, 179, 25, 1);
+  color: rgba(248, 179, 25, 1);
+  backdrop-filter: none;
+}
+
+.secondary {
+  -webkit-transition: all 0.2s ease-in-out;
+  width: 30%;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.secondary:hover {
+  -webkit-transform: scale(1.1);
+}
+
+
+.overview {
+  width: 400px;
+  word-break: break-all;
+  font-size: larger;
+  line-height: 28px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .kaito {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .secondary {
+    width: 100% !important;
+    margin-bottom: 50px;
+  }
+
+  .main {
+    overflow: unset !important;
+  }
+
+  .main .back-img {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overview {
+    width: 350px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .overview {
+    width: 300px !important;
+  }
+
+
+}

@@ -5,7 +5,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,6 @@ header {
 header.scrolled {
   background: linear-gradient(97deg, #0e2744e6 1.27%, #3025469e 75.23%);
 }
-
 
 .header-content {
   display: flex;
@@ -30,12 +29,12 @@ header.scrolled {
   margin-right: 20px;
 }
 
-.SignIn__form--button{
+.SignIn__form--button {
   width: 200px;
   background-color: #e50914;
 }
 .SignIn__form--button:hover {
-  background-color: #be0711; 
+  background-color: #be0711;
 }
 
 @media (max-width: 768px) {
@@ -54,3 +53,46 @@ header.scrolled {
     margin-right: 0;
   }
 }
+
+
+.movies-container {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+
+@media (min-width: 1200px) {
+  .movies-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .movies-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .movies-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .movies-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .movies-container {
+    grid-template-columns: 1fr;
+  }
+}
+

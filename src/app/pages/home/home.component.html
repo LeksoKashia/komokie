@@ -1,50 +1,20 @@
 @if(authService.currentUserSignal() == null) {
 <app-login></app-login>
 } @else {
-<header [ngClass]="{ 'scrolled': isScrolled }">
+<header [ngClass]="{ scrolled: isScrolled }">
   <div class="header-content">
-    <span *ngIf="currentUser?.username; else anonymousUser">{{ currentUser?.username }}</span>
+    <span *ngIf="currentUser?.username; else anonymousUser">{{
+      currentUser?.username
+    }}</span>
     <ng-template #anonymousUser>
       <span>Anonymous</span>
     </ng-template>
     <button class="SignIn__form--button" (click)="logout()">Logout</button>
   </div>
 </header>
-<div>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
-  <h1>leskoo</h1>
+
+<div class="movies-container">
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
 </div>
+
 }
