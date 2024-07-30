@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Movie } from '../../core/models/movie.model';
 import { MovieService } from '../../core/services/movie.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -9,7 +9,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, RouterLink],
   templateUrl: './movie-details.component.html',
-  styleUrl: './movie-details.component.scss'
+  styleUrl: './movie-details.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieDetailsComponent {
   movie!: Movie;

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Movie } from '../../core/models/movie.model';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './movie-card.component.html',
-  styleUrl: './movie-card.component.scss'
+  styleUrl: './movie-card.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MovieCardComponent {
   @Input() movie!: Movie;
